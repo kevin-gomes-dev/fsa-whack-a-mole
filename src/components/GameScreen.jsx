@@ -4,7 +4,7 @@ import holeImg from "../../public/hole.png";
 import Slot from "./Slot";
 import SlotList from "./SlotList";
 export default function GameScreen() {
-  const { startGame, restartGame, isPlaying, score } = useGame();
+  const { startGame, restartGame, isPlaying, score, highScores } = useGame();
   if (!isPlaying)
     return (
       <>
@@ -12,6 +12,10 @@ export default function GameScreen() {
           <h1>🕳️Whack A Mole!🕳️</h1>
           <p>Directions: Click the mole where it appears. Each click is worth 1 point.</p>
           <button onClick={startGame}>Start Game</button>
+          <h2>High Scores</h2>
+          {highScores.map((score) => (
+            <li>{score}</li>
+          ))}
         </div>
       </>
     );

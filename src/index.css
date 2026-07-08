@@ -57,3 +57,7 @@ p {
   max-width: 30rem;
   margin: 0 auto;
 }
+
+li {
+  list-style: none;
+}
