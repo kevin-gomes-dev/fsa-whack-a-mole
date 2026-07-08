@@ -1,9 +1,59 @@
+* {
+  margin: 0;
+  /* padding: 0; */
+  box-sizing: border-box;
+}
 
 .hole {
-  background: url("/hole.png") no-repeat center/contain;
+  background-image: url("/hole.png");
 }
 
 .mole {
+  cursor: pointer;
   background-image: url("/mole.png");
 }
 
+.slot {
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+}
+
+.center {
+  text-align: center;
+}
+button,
+p {
+  margin: 0.2rem;
+}
+.gameTopBar {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  padding: 1rem;
+  gap: 1rem;
+}
+
+.gameTopBar > * {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid black;
+}
+
+#root {
+  max-width: 35rem;
+  padding: 1rem;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.slots {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-auto-rows: 7rem;
+  gap: 1rem;
+  padding: 1rem;
+  max-width: 30rem;
+  margin: 0 auto;
+}
