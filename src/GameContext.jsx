@@ -26,6 +26,13 @@ export function GameProvider({ children }) {
 
   // Some helpful state changing functions, that way if they change in future, other components won't need to change
   function restartGame() {
+    updateHighScore();
+    setScore(0);
+    setIsPlaying(false);
+    resetMoleIndex();
+  }
+
+  function updateHighScore() {
     // Save high score if the length of the array is < 5 and the score is greater than at least one score
     let keepChecking = true;
 
@@ -47,9 +54,6 @@ export function GameProvider({ children }) {
 
     // Update state
     setHighScores(highScoreCopy);
-    setScore(0);
-    setIsPlaying(false);
-    resetMoleIndex();
   }
 
   function startGame() {

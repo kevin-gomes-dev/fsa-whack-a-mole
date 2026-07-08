@@ -13,8 +13,8 @@ export default function GameScreen() {
           <p>Directions: Click the mole where it appears. Each click is worth 1 point.</p>
           <button onClick={startGame}>Start Game</button>
           <h2>High Scores</h2>
-          {highScores.map((score) => (
-            <li>{score}</li>
+          {highScores.map((score, i) => (
+            <li key={i}>{score}</li>
           ))}
         </div>
       </>
