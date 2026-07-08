@@ -43,7 +43,10 @@ export function GameProvider({ children }) {
 
   // 9 slots, one can have a mole. Make random number 0 - 8
   function resetMoleIndex() {
-    const newMoleIndex = Math.floor(Math.random() * 8);
+    let newMoleIndex = Math.floor(Math.random() * 8);
+    while (newMoleIndex === moleIndex) {
+      newMoleIndex = Math.floor(Math.random() * 8);
+    }
     setMoleIndex(newMoleIndex);
   }
 
